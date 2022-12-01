@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Summary</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
+    <style>
+        html, body{
+            width: 100%;
+            height: 100%;
+        }
+        body{
+            background-color: hsl(225, 100%, 94%);
+            background-image: url(assets/pattern-background-desktop.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: top center;
+            font-family: 'Red Hat Display', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .f-500{font-weight: 500;}
+        .f-700{font-weight: 700;}
+        .f-900{font-weight: 900; color: hsl(223, 47%, 23%);}
+        .img-head{
+            padding-bottom: 50%;
+            background: hsl(225, 100%, 94%) url(assets/illustration-hero.svg) no-repeat center;
+            background-size: cover;
+        }
+        .text-center{
+            text-align: center;
+        }
+        .order-summary{
+            background-color: #ffffff;
+            display: inline-block;
+            width: 90%;
+            max-width:420px;
+            overflow: hidden;
+            border-radius: 1rem;
+            flex-shrink: 1;
+            flex-grow: 0;
+        }
+        .summary{
+            padding: 3rem;
+        }
+        .title{
+            font-size: 1.7rem;
+        }
+        .description{
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+            line-height: 1.4;
+        }
+        .pricing{
+            display: flex;
+            align-items: center;
+            padding: 1.5rem;
+            background-color: hsl(225, 100%, 98%);
+            border-radius: 5%;
+            line-height: 1.4;
+            margin-bottom: 1.5rem;
+        }
+        .icon{
+            width: 48px;
+            height: 48px;
+            background: url(assets/icon-music.svg) no-repeat center;
+            background-size: cover;
+            margin-right: 1rem;
+        }
+        .description, .total-price{
+            color: hsl(224, 23%, 55%);
+        }
+        .btn-cancel, .btn-change, .btn-payment{
+            cursor: pointer;
+        }
+        .btn-change{
+            color: hsl(245, 75%, 52%);
+            margin-left: auto;
+            text-decoration: underline;
+        }
+        .btn-change:hover{
+            opacity: 65%;
+            text-decoration: none;
+        }
+        .btn-payment{
+            border-radius: 1rem;
+            background-color: hsl(245, 75%, 52%);
+            color: #ffffff;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            /* box-shadow: 1px 37px 44px -26px rgba(31,47,86,0.64);
+            -webkit-box-shadow: 1px 37px 44px -26px rgba(31,47,86,0.64);
+            -moz-box-shadow: 1px 37px 44px -26px rgba(31,47,86,0.64); */
+            box-shadow: 0px 17px 22px -1px rgba(31,47,86,0.34);
+            -webkit-box-shadow: 0px 17px 22px -1px rgba(31,47,86,0.34);
+            -moz-box-shadow: 0px 17px 22px -1px rgba(31,47,86,0.34);
+        }
+        .btn-payment:hover{
+            opacity: 65%;
+        }
+        .btn-cancel{
+            color: hsl(224, 23%, 55%);
+        }
+        .btn-cancel:hover{
+            color: hsl(223, 47%, 23%);;
+        }
+        
+        @media (max-width: 420px){
+            body{
+                font-size: 15px;
+                background-image: url(assets/pattern-background-mobile.svg);
+            }
+            .title{
+                font-size: 1.4rem;
+            }
+            .summary{
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="order-summary">
+        <div class="img-head"></div>
+        <div class="summary">
+            <div class="title f-900 text-center">Order Summary</div>
+            <div class="description text-center">You can no listen to million songs, audiobooks, and podcast on any device anywhere you like!</div>
+            <div class="pricing">
+                <div class="icon"></div>
+                <div class="price">
+                    <div class="price-type f-900">Annual Plan</div>
+                    <div class="total-price">$59.99/year</div>
+                </div>
+                <div class="btn-change f-700">Change</div>
+            </div>
+            <div class="btn-payment f-700 text-center">Proceed to Payment</div>
+            <div class="btn-cancel f-700 text-center">Cancel Order</div>
+        </div>
+    </div>
+    
+</body>
+</html>
